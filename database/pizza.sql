@@ -1,0 +1,1 @@
+UPDATE responsaveis INNER JOIN pessoa ON pessoa.id_pes = responsaveis.pessoa_id_pes set nome = ?, endereco = ?, telefone = ? where id_res = ?
