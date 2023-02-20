@@ -3,16 +3,11 @@ package model.vo;
 public class clienteVO {
     private long id;
     private String nome;
-    private String cpf;
+    private long cpf;
     private String endereco;
     private String telefone;
 
-public clienteVO(String nome, String cpf, String endereco, String telefone) {
-        setNome(nome);
-        setCpf(cpf);
-        setEndereco(endereco);
-        setTelefone(telefone);
-    }
+
 //-----------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------
 //      METODOS GET(acessar, “pegar” alguns atributos da classe)
@@ -50,13 +45,11 @@ public void setNome(String nome) {
         }
     }
 }
-public void setCpf(String cpf) {
-    if(cpf == null){
+public void setCpf(long cpf) {
+    if(cpf>0){
+        this.cpf = cpf;
     }else{
-        if(cpf.equals("")){
-        }else{
-            this.cpf = cpf;
-        }
+
     }
 }
 public void setEndereco(String endereco) {
